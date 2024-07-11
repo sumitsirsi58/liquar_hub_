@@ -31,30 +31,7 @@ class SignupScreenState extends State<SignUpScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(
-              'lib/assests/Screenshot 2024-07-06 130747.png',
-              height: 150,
-              width: 150,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color:  ColorConst.TextFilledColor
-              ),
-              child: TextFormField(
-                controller: emailControler,
-                cursorColor: Colors.white70,
-                decoration: const InputDecoration(
-                  hintText: 'Name',
-                  hintStyle: TextStyle(color: Colors.black),
-                  prefixIcon: Icon(
-                    Icons.person,
-                    color: Colors.black,
-                  ),
-                  border: InputBorder.none,
-                ),
-              ),
-            ), const SizedBox(height: 8),
+            const SizedBox(height: 8),
             Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -122,61 +99,8 @@ class SignupScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 10,
             ),
-            const Row(
-              children: [
-                Expanded(
-                  child: Divider(
-                    color: Colors.white,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8),
-                  child: Text(
-                    'Login With Other',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                Expanded(
-                  child: Divider(
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
             const SizedBox(
               height: 12,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white)),
-                  child: const Center(
-                      child: Text(
-                        'G',
-                        style: TextStyle(color: Colors.white, fontSize: 28),
-                      )),
-                ),
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white),
-                  ),
-                  child: const Center(
-                    child: Icon(
-                      Icons.apple,
-                      color: Colors.white,
-                      size: 28,
-                    ),
-                  ),
-                ),
-              ],
             ),
             const SizedBox(height: 12),
              Row(

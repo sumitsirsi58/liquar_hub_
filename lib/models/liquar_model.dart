@@ -2,12 +2,14 @@ class LiquarModel {
   final String id;
   final String name;
   final String description;
+  String category;
   final double price;
 
   LiquarModel({
     required this.id,
     required this.name,
     required this.description,
+    required this.category,
     required this.price,
   });
 
@@ -16,7 +18,10 @@ class LiquarModel {
       id: json['id'] as String,
       name: json['name'] as String,
       description: json['description'] as String,
-      price: json['price'] is String ? double.parse(json['price']) : json['price'].toDouble(),
+      price: json['price'] is String
+          ? double.parse(json['price'])
+          : json['price'].toDouble(),
+      category: json['category'],
     );
   }
 
@@ -26,6 +31,7 @@ class LiquarModel {
       'name': name,
       'description': description,
       'price': price,
+      'category': category,
     };
   }
 }
